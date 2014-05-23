@@ -3,17 +3,27 @@
 		<meta charset="utf-8">
 		<title>html5-canvas</title>
 	</head>
-<<<<<<< HEAD
 	<style type="text/css">
 	body{
 		font-size:10px;
 		font-family: "黑体";
 	}
 	</style>
-=======
->>>>>>> parent of 04aa57a... canvas
 
-	<body>
-		
+	<script type="text/javascript">
+	function cnvs_getCoordinates(e){
+		x = e.clientX;
+		y = e.clientY;
+		document.getElementById('xycoordinates').innerHTML="坐标为:("+x+","+y+")";
+	}
+	function cnvs_clearCoordinates(){
+		document.getElementById("xycoordinates").innerHTML="";
+	}
+	</script>
+	<body style="margin:0px;">
+	<P>把鼠标悬停在下面的矩形上面可以看见坐标</P>
+	<div id="coordiv" style="float:left;width:480px;height:640px;border:1px solid #ccc;" onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"></div>
+
+	<div id="xycoordinates"></div>
 	</body>
 </html>
